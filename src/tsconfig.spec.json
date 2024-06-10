@@ -3,17 +3,13 @@
   "compilerOptions": {
     "outDir": "../out-tsc/spec",
     "baseUrl": "./",
-    "types": [
-      "jasmine",
-      "node"
-    ]
+    "types": ["jest", "node"],
+    "module": "ESNext",
+    "target": "ES2017",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node"
   },
-  "files": [
-    "test.ts",
-    "polyfills.ts"
-  ],
-  "include": [
-    "**/*.spec.ts",
-    "**/*.d.ts"
-  ]
+  "files": ["test.ts", "polyfills.ts"],
+  "include": ["src/**/*.spec.ts", "**/*.d.ts"]
 }
