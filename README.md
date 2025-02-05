@@ -1,80 +1,82 @@
-[![RealWorld Frontend](https://img.shields.io/badge/realworld-frontend-%23783578.svg)](http://realworld.io)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b0c71b0c-d430-4547-a10e-c84ce57cd2a1/deploy-status)](https://app.netlify.com/sites/angular-realworld/deploys)
+# ![Formation GoLogic Example de Projet](Gologic.png)
 
-# ![Angular Example App](logo.png)
+## Pré-requis pour exemple de projet 
 
-> ### Angular codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld-example-apps) spec and API.
+(Anglais à suivre)
 
+Pour exécuter ce projet Angular, préparez votre environnement ainsi :
 
-<a href="https://stackblitz.com/edit/angular-realworld" target="_blank"><img width="187" src="https://github.com/gothinkster/realworld/blob/master/media/edit_on_blitz.png?raw=true" /></a>&nbsp;&nbsp;<a href="https://thinkster.io/tutorials/building-real-world-angular-2-apps" target="_blank"><img width="384" src="https://raw.githubusercontent.com/gothinkster/realworld/master/media/learn-btn-hr.png" /></a>
-
-### [Demo](https://angular-realworld.netlify.app/)&nbsp;&nbsp;&nbsp;&nbsp;[RealWorld](https://github.com/gothinkster/realworld)
-
-
-
-This codebase was created to demonstrate a fully fledged application built with Angular that interacts with an actual backend server including CRUD operations, authentication, routing, pagination, and more. We've gone to great lengths to adhere to the [Angular Styleguide](https://angular.io/styleguide) & best practices.
-
-Additionally, there is an Angular 1.5 version of this codebase that you can [fork](https://github.com/gothinkster/angularjs-realworld-example-app) and/or [learn how to recreate](https://thinkster.io/angularjs-es6-tutorial).
+- Installer Node.js (v16.x ou supérieure) : [https://nodejs.org/](https://nodejs.org/)
+- Installer Angular CLI globalement : `npm install -g @angular/cli`
+- Recommandé : Visual Studio Code [https://code.visualstudio.com/](https://code.visualstudio.com/)
+- (OPTIONNEL) Yarn pour la gestion des dépendances : [https://yarnpkg.com/](https://yarnpkg.com/)
 
 
-# How it works
+## Démarrer l'application
 
-We're currently working on some docs for the codebase (explaining where functionality is located, how it works, etc) but the codebase should be straightforward to follow as is. We've also released a [step-by-step tutorial w/ screencasts](https://thinkster.io/tutorials/building-real-world-angular-2-apps) that teaches you how to recreate the codebase from scratch.
+- Cloner le dépôt : `git clone [URL_DU_DEPOT_ANGULAR]`
+- Installer les dépendances : `yarn install` ou `npm install`
+- Démarrer le serveur de développement : `ng serve`
+- Accéder à l'application sur : `http://localhost:4200/`
 
-### Making requests to the backend API
+## URL de démonstration
 
-For convenience, we have a live API server running at https://api.realworld.io/api for the application to make requests against. You can view [the API spec here](https://github.com/GoThinkster/productionready/blob/master/api) which contains all routes & responses for the server.
+- Démo live : [https://angular.realworld.io](https://angular.realworld.io)
 
-The source code for the backend server (available for Node, Rails and Django) can be found in the [main RealWorld repo](https://github.com/gothinkster/realworld).
+## GitHub Actions build
 
-If you want to change the API URL to a local server, simply edit `src/environments/environment.ts` and change `api_url` to the local server's URL (i.e. `localhost:3000/api`)
+![Build and Test](https://github.com/gothinkster/angular-realworld-example-app/workflows/Build%20and%20Test/badge.svg)
 
+## [Source et documentation](https://github.com/gothinkster/realworld)
 
-# Getting started
+Cette base de code Angular démontre une application complète avec :
 
-Make sure you have the [Angular CLI](https://github.com/angular/angular-cli#installation) installed globally. We use [Yarn](https://yarnpkg.com) to manage the dependencies, so we strongly recommend you to use it. you can install it from [Here](https://yarnpkg.com/en/docs/install), then run `yarn install` to resolve all dependencies (might take a minute).
+- Authentification JWT
+- Opérations CRUD pour articles et commentaires
+- Pagination et système de favoris
+- Profils utilisateurs avec follow/unfollow
+- Routing avancé
+- Markdown rendering
+- Respect des meilleures pratiques Angular
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Le projet implémente la spécification [RealWorld](https://github.com/gothinkster/realworld) et communique avec une API backend disponible pour différentes technologies.
 
-### Building the project
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+# ![Formation GoLogic Example de Projet](Gologic.png)
 
+## Prerequisites
 
-## Functionality overview
+To run this Angular project, please prepare your environment as follows:
 
-The example application is a social blogging site (i.e. a Medium.com clone) called "Conduit". It uses a custom API for all requests, including authentication. You can view a live demo over at https://angular.realworld.io
+- Install Node.js (v16.x or higher): [https://nodejs.org/](https://nodejs.org/)
+- Install Angular CLI globally: `npm install -g @angular/cli`
+- Recommended: Visual Studio Code [https://code.visualstudio.com/](https://code.visualstudio.com/)
+- (OPTIONAL) Yarn package manager: [https://yarnpkg.com/](https://yarnpkg.com/)
 
-**General functionality:**
+## Start the application
 
-- Authenticate users via JWT (login/signup pages + logout button on settings page)
-- CRU* users (sign up & settings page - no deleting required)
-- CRUD Articles
-- CR*D Comments on articles (no updating required)
-- GET and display paginated lists of articles
-- Favorite articles
-- Follow other users
+- Clone repository: `git clone [ANGULAR_REPO_URL]`
+- Install dependencies: `yarn install` or `npm install`
+- Start dev server: `ng serve`
+- Access application at: `http://localhost:4200/`
 
-**The general page breakdown looks like this:**
+## Live Demo URL
 
-- Home page (URL: /#/ )
-    - List of tags
-    - List of articles pulled from either Feed, Global, or by Tag
-    - Pagination for list of articles
-- Sign in/Sign up pages (URL: /#/login, /#/register )
-    - Uses JWT (store the token in localStorage)
-    - Authentication can be easily switched to session/cookie based
-- Settings page (URL: /#/settings )
-- Editor page to create/edit articles (URL: /#/editor, /#/editor/article-slug-here )
-- Article page (URL: /#/article/article-slug-here )
-    - Delete article button (only shown to article's author)
-    - Render markdown from server client side
-    - Comments section at bottom of page
-    - Delete comment button (only shown to comment's author)
-- Profile page (URL: /#/profile/:username, /#/profile/:username/favorites )
-    - Show basic user info
-    - List of articles populated from author's created articles or author's favorited articles
+- Live demo: [https://angular.realworld.io](https://angular.realworld.io)
 
+## GitHub Actions build
 
-<br />
+![Build and Test](https://github.com/gothinkster/angular-realworld-example-app/workflows/Build%20and%20Test/badge.svg)
 
-[![Brought to you by Thinkster](https://raw.githubusercontent.com/gothinkster/realworld/master/media/end.png)](https://thinkster.io)
+## [Source and documentation](https://github.com/gothinkster/realworld)
+
+This Angular codebase demonstrates a full-featured application including:
+
+- JWT Authentication
+- CRUD operations for articles and comments
+- Pagination and favoriting system
+- User profiles with follow/unfollow
+- Advanced routing
+- Markdown rendering
+- Adherence to Angular style guide
+
+The project implements the [RealWorld](https://github.com/gothinkster/realworld) specification and communicates with a backend API available for different technologies.
