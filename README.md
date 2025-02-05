@@ -2,7 +2,7 @@
 
 ## Pré-requis pour exemple de projet 
 
-(Anglais à suivre)
+(Anglais plus bas)
 
 Pour exécuter ce projet Angular, préparez votre environnement ainsi :
 
@@ -13,19 +13,9 @@ Pour exécuter ce projet Angular, préparez votre environnement ainsi :
 
 
 ## Démarrer l'application
-
-- Cloner le dépôt : `git clone [URL_DU_DEPOT_ANGULAR]`
 - Installer les dépendances : `yarn install` ou `npm install`
 - Démarrer le serveur de développement : `ng serve`
 - Accéder à l'application sur : `http://localhost:4200/`
-
-## URL de démonstration
-
-- Démo live : [https://angular.realworld.io](https://angular.realworld.io)
-
-## GitHub Actions build
-
-![Build and Test](https://github.com/gothinkster/angular-realworld-example-app/workflows/Build%20and%20Test/badge.svg)
 
 ## [Source et documentation](https://github.com/gothinkster/realworld)
 
@@ -54,18 +44,9 @@ To run this Angular project, please prepare your environment as follows:
 
 ## Start the application
 
-- Clone repository: `git clone [ANGULAR_REPO_URL]`
 - Install dependencies: `yarn install` or `npm install`
 - Start dev server: `ng serve`
 - Access application at: `http://localhost:4200/`
-
-## Live Demo URL
-
-- Live demo: [https://angular.realworld.io](https://angular.realworld.io)
-
-## GitHub Actions build
-
-![Build and Test](https://github.com/gothinkster/angular-realworld-example-app/workflows/Build%20and%20Test/badge.svg)
 
 ## [Source and documentation](https://github.com/gothinkster/realworld)
 
